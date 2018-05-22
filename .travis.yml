@@ -1,8 +1,11 @@
 os:
   - osx
-osx_image: xcode9.3
+  - linux
 language: node_js
 yarn:
   - "1.6.0"
 node_js:
   - "8.0.0"
+build_steps:
+  - git clone git@github.com:etaletai13/desktop
+  - cd desktop && yarn && yarn test
